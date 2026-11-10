@@ -1,0 +1,34 @@
+
+# heatham
+
+## Overview
+
+The temperaturepackage provides a dataset containing daily maximum
+temperatures in Hamilton, Ontario and a function to retrieve the maximum
+temperature for a given date.
+
+## Dataset
+
+The package contains the dataset `temperature_data`, which includes the
+date and maximum daily temperature.
+
+## Function
+
+The package includes the function `get_max_temperature()`.
+
+This function returns the maximum daily temperature in Hamilton, ON for
+a specified date.
+
+If no temperature is available, an informative message is returned.
+
+## Example
+
+``` r
+library(heatham)
+
+get_max_temperature("2024-07-15")
+```
+
+## Author
+
+Damian Glauser

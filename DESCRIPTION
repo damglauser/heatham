@@ -1,0 +1,16 @@
+Package: heatham
+Title: Hottest Day per Month (May - October, 2023 - 2026)
+Version: 0.0.0.9000
+Authors@R: 
+    person("Damian", "Glauser", , "glauserd@mcmasetr.ca", role = c("aut", "cre"))
+Description: By using this function you can find which day of each month in Hamilton, ON was the hottest. Output of the function is the hottest date of the month and its highest measured temperature during that day. Data is available for May until October for the years from 2023 to 2026.
+License: MIT + file LICENSE
+Config/roxygen2/version: 8.1.1
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Depends: 
+    R (>= 3.5)
+LazyData: true
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

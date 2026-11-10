@@ -1,0 +1,12 @@
+#' heatham: Maximum Daily Temperature in Hamilton
+#'
+#' This package provides daily maximum temperature
+#' data for Hamilton, Ontario, Canada.
+#'
+#' It allows users to identify the hottest day
+#' of each month from May to October for the years
+#' 2023 to 2026.
+#'
+#' @author Damian Glauser
+#' @keywords internal
+"_PACKAGE"
