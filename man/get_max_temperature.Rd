@@ -15,7 +15,7 @@ message if no temperature is available.
 }
 \description{
 This function returns the maximum daily temperature in Hamilton, ON
-for a specified date.
+for a specified date in Degree Celsius.
 }
 \details{
 If no temperature is available for the requested date,

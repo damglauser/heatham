@@ -12,7 +12,9 @@
 #'   \item{max_temperature}{Maximum daily temperature}
 #' }
 #'
-#' @source Original research CSV file.
+#' @source
+#' City of Hamilton Open Data Portal:
+#' https://open.hamilton.ca/datasets/65799be5bcb742aba177b7c573f3ae08_0/explore
 #'
 #' @examples
 #' head(temperature_data)

@@ -1,0 +1,87 @@
+---
+title: "Getting Started with heatham"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting Started with heatham}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Introduction
+
+The `heatham` package provides access to daily maximum temperature data for Hamilton, Ontario, Canada.
+
+The package includes a dataset containing daily temperature observations and a function called `get_max_temperature()`. This function allows users to retrieve the maximum temperature recorded on a specific date.
+
+This vignette demonstrates how to use the package function to retrieve daily maximum temperatures.
+
+# Data source
+
+The temperature data originate from the City of Hamilton's Open Data Portal.
+The original dataset is available here:
+
+City of Hamilton Open Data Portal - Heat Related Illness Reporting Data
+https://open.hamilton.ca/datasets/65799be5bcb742aba177b7c573f3ae08_0/explore
+
+The original dataset contains several variables related to heat conditions and heat-related illness reporting. For this package, only the date and maximum temperature variables are retained.
+
+Temperature measurements are reported in degrees Celsius.
+
+# Loading the package and dataset
+
+Before using the package functions, we first load `heatham`.
+
+```{r load-package}
+library(heatham)
+```
+
+The package includes a dataset called `temperature_data`. Load it by using the `data()` function:
+
+```{r load-data}
+data("temperature_data", package = "heatham")
+```
+
+# Retrieving the maximum temperature for a specific date
+
+Currently the only function of the `heatham` package is `get_max_temperature()`.
+
+Add the date to the brackets in the function. The date must be provided in the format `YYYY-MM-DD` or as an R `Date` object.
+
+For example, July 15, 2024, is written as `"2024-07-15"`.
+
+To retrieve the maximum temperature for this date write as follows:
+
+```{r temperature-example}
+get_max_temperature("2024-07-15")
+```
+
+The function returns the maximum temperature recorded on the selected date in degrees Celsius.
+
+# Handling missing temperature observations
+
+Not every date is represented in the dataset. Data is only available from May to October for the years 2023-2026.
+
+If a user selects a date for which no temperature observation is available, the function returns an informative message instead of a numerical temperature value.
+
+For example, January 12, 1980, is outside the period covered by the dataset:
+
+```{r missing-temperature}
+get_max_temperature("1980-01-12")
+```
+
+# Invalid date inputs
+
+If an invalid date is provided, an error is generated to inform the user.
+
+For example, the following code illustrates an invalid input:
+
+```{r invalid-date, eval = FALSE}
+get_max_temperature("1st of DecemBRO 2020")
+```

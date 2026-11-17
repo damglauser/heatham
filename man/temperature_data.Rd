@@ -12,7 +12,8 @@ A data frame with two variables:
 }
 }
 \source{
-Original research CSV file.
+City of Hamilton Open Data Portal:
+https://open.hamilton.ca/datasets/65799be5bcb742aba177b7c573f3ae08_0/explore
 }
 \usage{
 temperature_data

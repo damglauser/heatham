@@ -3,7 +3,7 @@ utils::globalVariables("temperature_data")
 #' Get Maximum Daily Temperature for a Given Date
 #'
 #' This function returns the maximum daily temperature in Hamilton, ON
-#' for a specified date.
+#' for a specified date in Degree Celsius.
 #'
 #' If no temperature is available for the requested date,
 #' an informative message is returned.
